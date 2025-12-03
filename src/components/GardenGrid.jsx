@@ -2,11 +2,11 @@ import React from 'react';
 import PlantCard from './PlantCard';
 import styles from './GardenGrid.module.css';
 
-const GardenGrid = ({ habits, onToggle, onDelete }) => {
+const GardenGrid = ({ habits, onToggle, onDelete, onArchive }) => {
     if (habits.length === 0) {
         return (
             <div className={styles.emptyState}>
-                <p>Your garden is empty. Plant your first habit! 🌱</p>
+                <p>Your garden is empty. Add a habit to start growing! 🌱</p>
             </div>
         );
     }
@@ -19,6 +19,7 @@ const GardenGrid = ({ habits, onToggle, onDelete }) => {
                     habit={habit}
                     onToggle={onToggle}
                     onDelete={onDelete}
+                    onArchive={onArchive}
                 />
             ))}
         </div>

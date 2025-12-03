@@ -1,19 +1,46 @@
-.card {
-    background: var(--color-white);
+.cardWrapper {
+    perspective: 1000px;
+    width: 100%;
+    height: 320px;
+}
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipped .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     box-shadow: 0 4px 12px var(--color-shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    overflow: hidden;
+    background: var(--color-white);
+    box-sizing: border-box;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px var(--color-shadow);
+.cardFront {
+    /* Default front styles */
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    background: var(--color-bg);
+    justify-content: flex-start;
 }
 
 .completed {
@@ -117,17 +144,83 @@
     transform: scale(0.95);
 }
 
-.deleteBtn {
+.iconBtn {
     background: transparent;
     border: 1px solid #eee;
     border-radius: var(--radius-sm);
     cursor: pointer;
     padding: var(--spacing-sm);
-    opacity: 0.5;
-    transition: opacity 0.2s;
+    opacity: 0.7;
+    transition: all 0.2s;
+    font-size: 1rem;
 }
 
-.deleteBtn:hover {
+.iconBtn:hover {
     opacity: 1;
-    background: #fff0f0;
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.harvestBtn {
+    flex: 1;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: var(--color-white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.harvestBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+.backHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.backHeader h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.backStats {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--color-text);
 }

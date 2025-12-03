@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { useSound } from '../context/SoundContext';
 import styles from './ThemeSwitcher.module.css';
 
 const ThemeSwitcher = () => {
     const { theme, setTheme } = useTheme();
+    const { isMuted, toggleMute } = useSound();
 
     const themes = [
         { id: 'spring', icon: '🌸', label: 'Spring' },
@@ -13,17 +15,25 @@ const ThemeSwitcher = () => {
     ];
 
     return (
-        <div className={styles.switcher}>
-            {themes.map(t => (
+        <div className={styles.container}>
+            {themes.map((t) => (
                 <button
                     key={t.id}
-                    className={`${styles.btn} ${theme === t.id ? styles.active : ''}`}
+                    className={`${styles.themeBtn} ${theme === t.id ? styles.active : ''}`}
                     onClick={() => setTheme(t.id)}
                     title={t.label}
                 >
                     {t.icon}
                 </button>
             ))}
+            <div className={styles.divider}></div>
+            <button
+                className={styles.themeBtn}
+                onClick={toggleMute}
+                title={isMuted ? "Unmute" : "Mute"}
+            >
+                {isMuted ? '🔇' : '🔊'}
+            </button>
         </div>
     );
 };

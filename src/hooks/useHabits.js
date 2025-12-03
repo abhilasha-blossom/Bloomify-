@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const STORAGE_KEY = 'bloomify-habits';
+const ARCHIVE_KEY = 'bloomify-archive';
 
 export const useHabits = () => {
     const [habits, setHabits] = useState(() => {
@@ -8,9 +9,18 @@ export const useHabits = () => {
         return saved ? JSON.parse(saved) : [];
     });
 
+    const [archivedHabits, setArchivedHabits] = useState(() => {
+        const saved = localStorage.getItem(ARCHIVE_KEY);
+        return saved ? JSON.parse(saved) : [];
+    });
+
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(habits));
     }, [habits]);
+
+    useEffect(() => {
+        localStorage.setItem(ARCHIVE_KEY, JSON.stringify(archivedHabits));
+    }, [archivedHabits]);
 
     // Check for missed days on load
     useEffect(() => {
@@ -80,5 +90,18 @@ export const useHabits = () => {
         setHabits(prev => prev.filter(h => h.id !== id));
     };
 
-    return { habits, addHabit, toggleHabit, deleteHabit };
+    const archiveHabit = (id) => {
+        const habitToArchive = habits.find(h => h.id === id);
+        if (habitToArchive) {
+            const archived = {
+                ...habitToArchive,
+                archivedDate: new Date().toISOString().split('T')[0],
+                finalStreak: habitToArchive.streak
+            };
+            setArchivedHabits(prev => [archived, ...prev]);
+            deleteHabit(id);
+        }
+    };
+
+    return { habits, archivedHabits, addHabit, toggleHabit, deleteHabit, archiveHabit };
 };

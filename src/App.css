@@ -67,3 +67,23 @@
   opacity: 0.5;
   font-size: 0.9rem;
 }
+
+.greenhouse-btn {
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: var(--spacing-md);
+  transition: all 0.2s;
+  font-family: var(--font-family);
+}
+
+.greenhouse-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,13 +1,13 @@
-.switcher {
+.container {
     display: flex;
     gap: var(--spacing-xs);
     background: rgba(255, 255, 255, 0.5);
     padding: var(--spacing-xs);
-    border-radius: var(--radius-lg);
-    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
 }
 
-.btn {
+.themeBtn {
     background: transparent;
     border: none;
     font-size: 1.2rem;
@@ -15,16 +15,23 @@
     cursor: pointer;
     border-radius: 50%;
     transition: transform 0.2s, background 0.2s;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-.btn:hover {
+.themeBtn:hover {
     transform: scale(1.1);
     opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .active {
-    background: var(--color-white);
-    box-shadow: 0 2px 4px var(--color-shadow);
     opacity: 1;
+    background: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 var(--spacing-xs);
 }

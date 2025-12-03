@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.container h4 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.completed {
+    background: var(--color-primary);
+    box-shadow: 0 0 4px var(--color-primary);
+}
