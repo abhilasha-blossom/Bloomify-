@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
+  <!-- Soil -->
+  <path d="M60 160 Q100 180 140 160" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Plant -->
+  <path d="M100 160 Q100 100 100 80" stroke="#8FB58D" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <path d="M100 130 Q70 120 60 130 Q70 150 100 130" fill="#A4C3A2" />
+  <path d="M100 110 Q130 100 140 110 Q130 130 100 110" fill="#A4C3A2" />
+  <path d="M100 80 Q80 60 70 70 Q80 90 100 80" fill="#CFE8CC" />
+  <path d="M100 80 Q120 60 130 70 Q120 90 100 80" fill="#CFE8CC" />
+</svg>

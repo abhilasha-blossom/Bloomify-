@@ -1,0 +1,37 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+}
+
+.app-header h1 {
+  color: var(--color-text);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.app-header p {
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.app-footer {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text);
+  opacity: 0.5;
+  font-size: 0.9rem;
+}

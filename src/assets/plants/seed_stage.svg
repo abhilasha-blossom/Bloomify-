@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
+  <!-- Soil -->
+  <path d="M60 140 Q100 160 140 140" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Seed -->
+  <ellipse cx="100" cy="145" rx="10" ry="8" fill="#5D4037" />
+  <path d="M100 145 Q100 135 105 130" stroke="#8D6E63" stroke-width="2" fill="none" />
+</svg>

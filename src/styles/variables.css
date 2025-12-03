@@ -1,0 +1,37 @@
+:root {
+  /* Option 1: Pastel Cozy Garden 🌸 */
+  --color-primary: #A4C3A2;   /* Soft Leaf Green */
+  --color-secondary: #CFE8CC; /* Pastel Mint */
+  --color-bg: #F1E8D9;        /* Warm Beige */
+  --color-accent: #E4B9C0;    /* Rose Blush */
+  --color-text: #5B4231;      /* Deep Forest Brown */
+  --color-white: #FFFFFF;
+  --color-shadow: rgba(91, 66, 49, 0.1);
+
+  /* Spacing & Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Typography */
+  --font-family: 'Nunito', 'Segoe UI', sans-serif; /* Soft rounded font */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-family);
+}

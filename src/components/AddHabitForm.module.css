@@ -1,0 +1,56 @@
+.form {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputGroup {
+    display: flex;
+    flex: 1;
+    gap: var(--spacing-xs);
+}
+
+.iconSelect {
+    font-size: 1.5rem;
+    padding: var(--spacing-xs);
+    border: 1px solid #eee;
+    border-radius: var(--radius-sm);
+    background: #fff;
+    cursor: pointer;
+}
+
+.input {
+    flex: 1;
+    padding: var(--spacing-sm);
+    border: 1px solid #eee;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: transparent;
+}
+
+.addButton {
+    background: var(--color-text);
+    color: var(--color-white);
+    border: none;
+    padding: 0 var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.addButton:hover {
+    background: #4A3627;
+}
