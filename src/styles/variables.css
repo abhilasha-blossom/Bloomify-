@@ -1,18 +1,23 @@
 :root {
-  /* Option 1: Pastel Cozy Garden 🌸 */
-  --color-primary: #A4C3A2;   /* Soft Leaf Green */
-  --color-secondary: #CFE8CC; /* Pastel Mint */
-  --color-bg: #F1E8D9;        /* Warm Beige */
-  --color-accent: #E4B9C0;    /* Rose Blush */
-  --color-text: #5B4231;      /* Deep Forest Brown */
+  /* Option 1: FlowHer Spring 🌸 */
+  --color-primary: #d48c9e;
+  /* Mauve Pink */
+  --color-secondary: #9fd3eb;
+  /* Sky Blue */
+  --color-bg: #f9e4ec;
+  /* Light Pink */
+  --color-accent: #fdf3a7;
+  /* Pastel Yellow */
+  --color-text: #4e3629;
+  /* Bark Brown */
   --color-white: #FFFFFF;
-  --color-shadow: rgba(91, 66, 49, 0.1);
+  --color-shadow: rgba(78, 54, 41, 0.1);
 
   /* Spacing & Radius */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  
+
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -20,7 +25,50 @@
   --spacing-xl: 32px;
 
   /* Typography */
-  --font-family: 'Nunito', 'Segoe UI', sans-serif; /* Soft rounded font */
+  --font-family: 'Nunito', 'Segoe UI', sans-serif;
+  /* Soft rounded font */
+}
+
+/* 🍂 Autumn Theme */
+body.theme-autumn {
+  --color-primary: #788D53;
+  /* Olive Green */
+  --color-secondary: #F4EAD2;
+  /* Wheat Cream */
+  --color-bg: #F4EAD2;
+  /* Wheat Cream */
+  --color-accent: #E69A4F;
+  /* Pumpkin Orange */
+  --color-text: #5A4635;
+  /* Coffee Brown */
+}
+
+/* ❄️ Winter Theme */
+body.theme-winter {
+  --color-primary: #5D737E;
+  /* Slate Blue */
+  --color-secondary: #D4E4F7;
+  /* Icy Blue */
+  --color-bg: #F0F8FF;
+  /* Alice Blue */
+  --color-accent: #A8D0E6;
+  /* Frost */
+  --color-text: #2C3E50;
+  /* Dark Blue */
+}
+
+/* ☀️ Summer Theme */
+body.theme-summer {
+  --color-primary: #4CAF50;
+  /* Bright Green */
+  --color-secondary: #FFF9C4;
+  /* Pale Yellow */
+  --color-bg: #FFFDE7;
+  /* Sunny White */
+  --color-accent: #FFEB3B;
+  /* Sun Yellow */
+  --color-text: #3E2723;
+  /* Dark Brown */
 }
 
 body {
@@ -29,6 +77,12 @@ body {
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
   min-height: 100vh;
 }
 

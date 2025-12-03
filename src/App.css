@@ -13,10 +13,42 @@
   padding-top: var(--spacing-lg);
 }
 
-.app-header h1 {
-  color: var(--color-text);
-  font-size: 2.5rem;
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.app-header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 800;
+  color: var(--color-text);
+  /* Fallback/Base color */
+  animation: floatTitle 3s ease-in-out infinite;
+}
+
+.title-text {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-text));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes floatTitle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .app-header p {

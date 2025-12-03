@@ -1,0 +1,30 @@
+.switcher {
+    display: flex;
+    gap: var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.5);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(4px);
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s, background 0.2s;
+    opacity: 0.6;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.active {
+    background: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    opacity: 1;
+}

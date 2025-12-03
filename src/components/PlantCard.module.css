@@ -8,6 +8,7 @@
     align-items: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -34,11 +35,31 @@
     max-height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bounce {
+    animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .info {
     width: 100%;
     text-align: center;
+    z-index: 1;
 }
 
 .header {
@@ -84,12 +105,16 @@
     border-radius: var(--radius-sm);
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .toggleBtn:hover {
     background: #8FB58D;
-    /* Slightly darker */
+    transform: scale(1.05);
+}
+
+.toggleBtn:active {
+    transform: scale(0.95);
 }
 
 .deleteBtn {

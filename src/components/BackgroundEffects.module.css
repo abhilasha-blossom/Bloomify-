@@ -1,0 +1,45 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: -1;
+    /* Behind everything */
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    top: -10%;
+    opacity: 1;
+    animation-name: floatDown;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(20px);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg) translateX(-20px);
+        opacity: 0;
+    }
+}

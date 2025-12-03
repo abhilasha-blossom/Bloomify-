@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
+  <path d="M60 160 Q100 180 140 160" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M100 160 Q100 100 100 70" stroke="#8BC34A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M100 120 Q60 100 50 120 Q60 140 100 120" fill="#8BC34A" />
+  <path d="M100 100 Q140 80 150 100 Q140 120 100 100" fill="#8BC34A" />
+  <g transform="translate(100, 60)">
+    <circle cx="0" cy="0" r="20" fill="#5D4037" />
+    <path d="M0 -25 Q10 -50 0 -60 Q-10 -50 0 -25" fill="#FFEB3B" />
+    <path d="M0 25 Q10 50 0 60 Q-10 50 0 25" fill="#FFEB3B" />
+    <path d="M25 0 Q50 10 60 0 Q50 -10 25 0" fill="#FFEB3B" />
+    <path d="M-25 0 Q-50 10 -60 0 Q-50 -10 -25 0" fill="#FFEB3B" />
+    <path d="M18 -18 Q36 -36 42 -42 Q36 -36 18 -18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
+    <path d="M-18 -18 Q-36 -36 -42 -42 Q-36 -36 -18 -18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
+    <path d="M18 18 Q36 36 42 42 Q36 36 18 18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
+    <path d="M-18 18 Q-36 36 -42 42 Q-36 36 -18 18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
+  </g>
+</svg>

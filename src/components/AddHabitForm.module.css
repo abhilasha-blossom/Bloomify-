@@ -6,9 +6,12 @@
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     box-shadow: 0 2px 8px var(--color-shadow);
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 10;
+    /* Ensure it stays on top */
 }
 
 .inputGroup {
@@ -17,13 +20,15 @@
     gap: var(--spacing-xs);
 }
 
-.iconSelect {
-    font-size: 1.5rem;
+.iconSelect,
+.typeSelect {
+    font-size: 1rem;
     padding: var(--spacing-xs);
     border: 1px solid #eee;
     border-radius: var(--radius-sm);
     background: #fff;
     cursor: pointer;
+    font-family: var(--font-family);
 }
 
 .input {

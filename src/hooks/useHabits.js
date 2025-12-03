@@ -25,7 +25,6 @@ export const useHabits = () => {
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
             // If more than 1 day has passed (meaning they missed yesterday), reset streak
-            // Note: diffDays = 0 (same day), diffDays = 1 (yesterday), diffDays > 1 (missed)
             if (diffDays > 1) {
                 return { ...habit, streak: 0 };
             }
@@ -33,11 +32,12 @@ export const useHabits = () => {
         }));
     }, []);
 
-    const addHabit = (name, icon) => {
+    const addHabit = (name, icon, plantType = 'classic') => {
         const newHabit = {
             id: crypto.randomUUID(),
             name,
             icon: icon || '🌱',
+            plantType,
             streak: 0,
             lastCompletedDate: null,
             history: []
@@ -55,12 +55,7 @@ export const useHabits = () => {
 
             if (isCompletedToday) {
                 // Undo completion
-                // If we undo, we should revert the streak. 
-                // Logic: if streak > 0, decrement.
-                // Also remove today from history.
                 const newHistory = habit.history.filter(date => date !== today);
-                // Find the previous completed date to restore lastCompletedDate? 
-                // Simplification: If we undo, we just decrement streak and set lastCompletedDate to the previous one in history or null.
                 const prevDate = newHistory.length > 0 ? newHistory[newHistory.length - 1] : null;
 
                 return {
