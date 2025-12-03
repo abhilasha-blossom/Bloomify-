@@ -1,23 +1,60 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
-  <!-- Soil -->
-  <path d="M60 160 Q100 180 140 160" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fad0c4;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
   <!-- Stem -->
-  <path d="M100 160 Q100 100 100 70" stroke="#8FB58D" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M100 180 Q100 140 100 110" stroke="#8FB58D" stroke-width="6" fill="none" />
+  <path d="M100 160 Q120 150 130 140" stroke="#8FB58D" stroke-width="4" fill="none" />
+  <path d="M100 160 Q80 150 70 140" stroke="#8FB58D" stroke-width="4" fill="none" />
+  
   <!-- Leaves -->
-  <path d="M100 130 Q60 120 50 130 Q60 150 100 130" fill="#A4C3A2" />
-  <path d="M100 110 Q140 100 150 110 Q140 130 100 110" fill="#A4C3A2" />
-  <!-- Bloom -->
-  <g transform="translate(100, 60)">
-    <circle cx="0" cy="0" r="15" fill="#FFE082" />
-    <path d="M0 -15 Q10 -40 0 -50 Q-10 -40 0 -15" fill="#E4B9C0" />
-    <path d="M0 15 Q10 40 0 50 Q-10 40 0 15" fill="#E4B9C0" />
-    <path d="M15 0 Q40 10 50 0 Q40 -10 15 0" fill="#E4B9C0" />
-    <path d="M-15 0 Q-40 10 -50 0 Q-40 -10 -15 0" fill="#E4B9C0" />
-    <path d="M10 -10 Q30 -30 35 -35 Q30 -30 10 -10" fill="#E4B9C0" /> <!-- Petals diagonal -->
-    <path d="M10.6 -10.6 Q28 -28 35.3 -35.3 Q28 -28 10.6 -10.6" stroke="#E4B9C0" stroke-width="15" stroke-linecap="round" />
-    <path d="M-10.6 -10.6 Q-28 -28 -35.3 -35.3 Q-28 -28 -10.6 -10.6" stroke="#E4B9C0" stroke-width="15" stroke-linecap="round" />
-    <path d="M10.6 10.6 Q28 28 35.3 35.3 Q28 28 10.6 10.6" stroke="#E4B9C0" stroke-width="15" stroke-linecap="round" />
-    <path d="M-10.6 10.6 Q-28 28 -35.3 35.3 Q-28 28 -10.6 10.6" stroke="#E4B9C0" stroke-width="15" stroke-linecap="round" />
+  <path d="M100 160 Q130 160 140 130 Q110 140 100 160" fill="#A2D1A0" />
+  <path d="M100 160 Q70 160 60 130 Q90 140 100 160" fill="#A2D1A0" />
+
+  <!-- Petals (Back) -->
+  <g transform="translate(100, 90)" filter="url(#glow)">
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(0)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(45)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(90)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(135)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(180)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(225)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(270)" />
+    <circle cx="0" cy="-30" r="20" fill="#ff9a9e" transform="rotate(315)" />
   </g>
+
+  <!-- Petals (Front) -->
+  <g transform="translate(100, 90)">
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(22.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(67.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(112.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(157.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(202.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(247.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(292.5)" />
+    <circle cx="0" cy="-20" r="15" fill="url(#grad1)" transform="rotate(337.5)" />
+  </g>
+
+  <!-- Center -->
+  <circle cx="100" cy="90" r="12" fill="#fff" opacity="0.8" />
+  <circle cx="100" cy="90" r="8" fill="#ffe066" />
+  
+  <!-- Sparkles -->
+  <circle cx="70" cy="60" r="2" fill="#fff" opacity="0.8">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="130" cy="70" r="3" fill="#fff" opacity="0.6">
+    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+  </circle>
 </svg>

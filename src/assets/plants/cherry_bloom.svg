@@ -1,15 +1,62 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
-  <path d="M60 160 Q100 180 140 160" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M100 160 Q100 100 100 60" stroke="#795548" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <g fill="#F8BBD0" opacity="0.8">
-    <circle cx="60" cy="100" r="15" />
-    <circle cx="140" cy="80" r="15" />
-    <circle cx="100" cy="60" r="20" />
-    <circle cx="80" cy="80" r="12" />
-    <circle cx="120" cy="70" r="12" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="canopyGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ffc1cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9a9e;stop-opacity:1" />
+    </radialGradient>
+    <filter id="fluff">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+  </defs>
+
+  <!-- Trunk -->
+  <path d="M90 190 Q100 180 100 140 Q100 100 90 80" stroke="#5D4037" stroke-width="12" fill="none" stroke-linecap="round" />
+  <path d="M100 140 Q120 120 130 100" stroke="#5D4037" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M100 150 Q70 130 60 110" stroke="#5D4037" stroke-width="8" fill="none" stroke-linecap="round" />
+
+  <!-- Roots -->
+  <path d="M90 190 Q80 200 70 200" stroke="#5D4037" stroke-width="8" fill="none" />
+  <path d="M100 190 Q120 200 130 200" stroke="#5D4037" stroke-width="8" fill="none" />
+
+  <!-- Canopy Layers (Cloud-like shapes) -->
+  <g filter="url(#fluff)">
+    <!-- Back Layer -->
+    <circle cx="70" cy="90" r="35" fill="#ffb7b2" />
+    <circle cx="130" cy="90" r="35" fill="#ffb7b2" />
+    <circle cx="100" cy="60" r="40" fill="#ffb7b2" />
+
+    <!-- Front Layer -->
+    <circle cx="50" cy="100" r="30" fill="url(#canopyGrad)" />
+    <circle cx="150" cy="100" r="30" fill="url(#canopyGrad)" />
+    <circle cx="100" cy="110" r="35" fill="url(#canopyGrad)" />
+    <circle cx="80" cy="70" r="35" fill="url(#canopyGrad)" />
+    <circle cx="120" cy="70" r="35" fill="url(#canopyGrad)" />
+    <circle cx="100" cy="40" r="30" fill="url(#canopyGrad)" />
   </g>
-  <circle cx="60" cy="100" r="5" fill="#E91E63" />
-  <circle cx="140" cy="80" r="5" fill="#E91E63" />
-  <circle cx="100" cy="60" r="6" fill="#E91E63" />
+
+  <!-- Individual Flowers Details -->
+  <g fill="#fff" opacity="0.6">
+    <circle cx="60" cy="80" r="3" />
+    <circle cx="140" cy="80" r="3" />
+    <circle cx="100" cy="50" r="3" />
+    <circle cx="80" cy="110" r="3" />
+    <circle cx="120" cy="110" r="3" />
+    <circle cx="50" cy="100" r="2" />
+    <circle cx="150" cy="100" r="2" />
+  </g>
+
+  <!-- Falling Petals Animation -->
+  <circle cx="80" cy="120" r="3" fill="#ff69b4">
+    <animate attributeName="cy" values="120;180" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="80;70;90;80" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="120" cy="130" r="3" fill="#ff69b4">
+    <animate attributeName="cy" values="130;190" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="120;130;110;120" dur="4s" repeatCount="indefinite" />
+  </circle>
+
 </svg>

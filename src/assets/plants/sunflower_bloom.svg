@@ -1,18 +1,51 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="90" fill="#F1E8D9" />
-  <path d="M60 160 Q100 180 140 160" stroke="#8D6E63" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M100 160 Q100 100 100 70" stroke="#8BC34A" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <path d="M100 120 Q60 100 50 120 Q60 140 100 120" fill="#8BC34A" />
-  <path d="M100 100 Q140 80 150 100 Q140 120 100 100" fill="#8BC34A" />
-  <g transform="translate(100, 60)">
-    <circle cx="0" cy="0" r="20" fill="#5D4037" />
-    <path d="M0 -25 Q10 -50 0 -60 Q-10 -50 0 -25" fill="#FFEB3B" />
-    <path d="M0 25 Q10 50 0 60 Q-10 50 0 25" fill="#FFEB3B" />
-    <path d="M25 0 Q50 10 60 0 Q50 -10 25 0" fill="#FFEB3B" />
-    <path d="M-25 0 Q-50 10 -60 0 Q-50 -10 -25 0" fill="#FFEB3B" />
-    <path d="M18 -18 Q36 -36 42 -42 Q36 -36 18 -18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
-    <path d="M-18 -18 Q-36 -36 -42 -42 Q-36 -36 -18 -18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
-    <path d="M18 18 Q36 36 42 42 Q36 36 18 18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
-    <path d="M-18 18 Q-36 36 -42 42 Q-36 36 -18 18" stroke="#FFEB3B" stroke-width="20" stroke-linecap="round" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Stem -->
+  <path d="M100 200 Q100 150 100 120" stroke="#6B8E23" stroke-width="8" fill="none" />
+  
+  <!-- Leaves -->
+  <path d="M100 160 Q140 150 150 130 Q120 140 100 160" fill="#556B2F" />
+  <path d="M100 170 Q60 160 50 140 Q80 150 100 170" fill="#556B2F" />
+
+  <!-- Petals Layer 1 -->
+  <g transform="translate(100, 90)">
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(0)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(30)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(60)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(90)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(120)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(150)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(180)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(210)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(240)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(270)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(300)" />
+    <ellipse cx="0" cy="-45" rx="10" ry="35" fill="#FFD700" transform="rotate(330)" />
   </g>
+
+  <!-- Petals Layer 2 (Offset) -->
+  <g transform="translate(100, 90)">
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(15)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(45)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(75)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(105)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(135)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(165)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(195)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(225)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(255)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(285)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(315)" />
+    <ellipse cx="0" cy="-40" rx="8" ry="30" fill="#FFA500" transform="rotate(345)" />
+  </g>
+
+  <!-- Center -->
+  <circle cx="100" cy="90" r="25" fill="#8B4513" />
+  <circle cx="100" cy="90" r="20" fill="#654321" opacity="0.5" />
+  
+  <!-- Seeds details -->
+  <circle cx="95" cy="85" r="2" fill="#3e2723" />
+  <circle cx="105" cy="85" r="2" fill="#3e2723" />
+  <circle cx="100" cy="95" r="2" fill="#3e2723" />
+  <circle cx="90" cy="90" r="2" fill="#3e2723" />
+  <circle cx="110" cy="90" r="2" fill="#3e2723" />
 </svg>

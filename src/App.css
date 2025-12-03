@@ -68,7 +68,15 @@
   font-size: 0.9rem;
 }
 
-.greenhouse-btn {
+.header-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-md);
+}
+
+.greenhouse-btn,
+.lab-btn {
   background: var(--color-white);
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
@@ -76,14 +84,24 @@
   border-radius: var(--radius-lg);
   font-weight: 700;
   cursor: pointer;
-  margin-top: var(--spacing-md);
   transition: all 0.2s;
   font-family: var(--font-family);
 }
 
-.greenhouse-btn:hover {
+.greenhouse-btn:hover,
+.lab-btn:hover {
   background: var(--color-primary);
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lab-btn {
+  border-color: #9b59b6;
+  color: #9b59b6;
+}
+
+.lab-btn:hover {
+  background: #9b59b6;
+  color: var(--color-white);
 }

@@ -38,13 +38,35 @@ const PlantCard = ({ habit, onToggle, onDelete, onArchive }) => {
         onArchive(habit.id);
     };
 
+    const handlePet = (e) => {
+        e.stopPropagation();
+        playSound('pop');
+
+        // Heart confetti
+        confetti({
+            particleCount: 15,
+            scalar: 2,
+            shapes: ['heart'],
+            colors: ['#FFC0CB', '#FF69B4', '#FF1493'],
+            origin: {
+                x: e.clientX / window.innerWidth,
+                y: e.clientY / window.innerHeight
+            }
+        });
+    };
+
     return (
         <div className={`${styles.cardWrapper} ${isFlipped ? styles.flipped : ''}`}>
             <div className={styles.cardInner}>
 
                 {/* FRONT */}
                 <div className={`${styles.cardFace} ${styles.cardFront} ${isCompletedToday ? styles.completed : ''}`}>
-                    <div className={styles.plantContainer}>
+                    <div
+                        className={styles.plantContainer}
+                        onClick={handlePet}
+                        style={{ cursor: 'grab' }}
+                        title="Pet me! 💖"
+                    >
                         <img src={image} alt={stage} className={`${styles.plantImage} ${isCompletedToday ? styles.bounce : ''}`} />
                     </div>
 
